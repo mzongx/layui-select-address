@@ -1,5 +1,6 @@
 # layui-select-address
-	基于layui封装了一个地址选择器，地址数据采用weui的city-picker。因为项目很多都封装在common里面，所以该common只抽出showCity和getCity方法。
+	基于layui封装了一个地址选择器，地址数据采用weui的city-picker。因为项目很多都封装在common里面，
+	所以该common只抽出showCity和getCity方法。
 ## 一、用法
 ### 1. html写法
   `name`和`lay-filter`必须保持统一,`data-area`是地址默认值
@@ -41,6 +42,7 @@ layui.use(['form', 'common'], function(){
 
     //三级地址联动
     common.showCity('province', 'city', 'district');
+    
     //监听提交
     form.on('submit(formDemo)', function(data){
       var resData = data.field,
@@ -48,7 +50,7 @@ layui.use(['form', 'common'], function(){
         city = resData.city,
         district = resData.district;
 
-      console.log(province, city, district)
+      console.log(province, city, district) // 440000 440100 440106
 
       // 通过地址code码获取地址名称
       var address = common.getCity({
@@ -56,7 +58,8 @@ layui.use(['form', 'common'], function(){
         city,
         district
       });
-      console.log(address);
+      
+      console.log(address); // {provinceName: "广东省", cityName: "广州市", districtName: "天河区"}
       return false;
     });
 });
