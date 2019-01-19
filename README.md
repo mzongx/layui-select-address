@@ -64,6 +64,8 @@ layui.use(['form', 'common'], function(){
     });
 });
 ```
+![图片](./src/img/img02.png "图片预览")
+
 ## 二、相关API
   common有两个方法， 
   `showCity`用来加载地址选择器，
