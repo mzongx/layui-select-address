@@ -1,11 +1,11 @@
 # layui-select-address
 	基于layui封装了一个地址选择器，地址数据采用weui的city-picker
 ## 一、用法
-	### 1. 需引入city-picker.js地址数据文件
+### 1. 需引入city-picker.js地址数据文件
 	```<script type="text/javascript" src="js/city-picker.js"></script>```
 	如果未引入，则会提示
 	![图片](img/img01.png "未引入地址数据")
-	### 2. layui引入common模块
+### 2. layui引入common模块
 	```
 		//config的设置是全局的
 		layui.config({
@@ -14,7 +14,7 @@
 			common: 'common' //如果 common.js 是在根目录，也可以不用设定别名
 		});
 	```
-	### 3. 使用模块
+### 3. 使用模块
 	```
 		layui.use(['form', 'common'], function(){
 			var common = layui.common,
