@@ -22,7 +22,7 @@
 ```javascript
 <script type="text/javascript" src="js/city-picker.js"></script>
 ```
-如果未引入，则会提示
+如果未引入，则会提示	  
 ![图片](./src/img/img01.png "未引入地址数据")
 ### 3. layui引入common模块
 ```javascript
@@ -41,24 +41,24 @@ layui.use(['form', 'common'], function(){
 
     //三级地址联动
     common.showCity('province', 'city', 'district');
-		//监听提交
-		form.on('submit(formDemo)', function(data){
-			var resData = data.field,
-				province = resData.province,
-				city = resData.city,
-				district = resData.district;
+    //监听提交
+    form.on('submit(formDemo)', function(data){
+      var resData = data.field,
+        province = resData.province,
+        city = resData.city,
+        district = resData.district;
 
-			console.log(province, city, district)
+      console.log(province, city, district)
 
-			// 通过地址code码获取地址名称
-			var address = common.getCity({
-				province, 
-				city,
-				district
-			});
-			console.log(address);
-			return false;
-		});
+      // 通过地址code码获取地址名称
+      var address = common.getCity({
+        province, 
+        city,
+        district
+      });
+      console.log(address);
+      return false;
+    });
 });
 ```
 ## 二、相关API
@@ -69,4 +69,4 @@ layui.use(['form', 'common'], function(){
 | 方法名 | 说明 | type |
 | ------------- | ------------- | ------------- |
 | showCity | [param1]省 [param2]市 [param3]县 | string |
-| getCity | [option]{param1 code param2 code param3 code} | string |
+| getCity | [option]{param1 code param2 code param3 code} | object |
