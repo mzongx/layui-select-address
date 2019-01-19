@@ -6,7 +6,7 @@
 <script type="text/javascript" src="js/city-picker.js"></script>
 ```
 如果未引入，则会提示
-![图片](img/img01.png "未引入地址数据")
+![图片](./src/img/img01.png "未引入地址数据")
 ### 2. layui引入common模块
 ```javascript
 //config的设置是全局的
